@@ -32,14 +32,7 @@ libXdmcp development package.
 make %{?_smp_mflags}
 
 %install
-
-make install DESTDIR=%{buildroot} INSTALL="install -p"
-
-# We intentionally don't ship *.la files
-rm -f %{buildroot}%{_libdir}/*.la
-
-# manual fixup later
-rm -rf %{buildroot}%{_docdir}
+%make_install
 
 %remove_docs
 
@@ -48,7 +41,7 @@ rm -rf %{buildroot}%{_docdir}
 
 %files
 %defattr(-,root,root,-)
-%doc AUTHORS COPYING ChangeLog Wraphelp.README.crypto
+%doc COPYING 
 %{_libdir}/libXdmcp.so.6
 %{_libdir}/libXdmcp.so.6.0.0
 
