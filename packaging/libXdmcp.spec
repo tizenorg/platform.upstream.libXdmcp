@@ -49,4 +49,4 @@ make %{?_smp_mflags}
 %defattr(-,root,root,-)
 %{_includedir}/X11/Xdmcp.h
 %{_libdir}/libXdmcp.so
-%{_libdir}/pkgconfig/xdmcp.p
+%{_libdir}/pkgconfig/xdmcp.pc
