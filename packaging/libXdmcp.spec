@@ -18,7 +18,6 @@ X Display Manager Control Protocol library.
 Summary:        Development files for %{name}
 Group:          Development/Libraries
 Requires:       %{name} = %{version}
-Provides:       libxdmcp-devel
 
 %description devel
 libXdmcp development package.
@@ -27,8 +26,7 @@ libXdmcp development package.
 %setup -q
 
 %build
-%reconfigure --disable-static \
-           LDFLAGS="${LDFLAGS} -Wl,--hash-style=both -Wl,--as-needed"
+%reconfigure --disable-static 
 make %{?_smp_mflags}
 
 %install
@@ -37,11 +35,12 @@ make %{?_smp_mflags}
 %remove_docs
 
 %post -p /sbin/ldconfig
+
 %postun -p /sbin/ldconfig
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING 
+%license COPYING 
 %{_libdir}/libXdmcp.so.6
 %{_libdir}/libXdmcp.so.6.0.0
 
