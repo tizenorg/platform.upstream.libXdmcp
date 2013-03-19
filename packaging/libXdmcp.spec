@@ -4,7 +4,7 @@ Release:        1
 License:        MIT
 Summary:        X Display Manager Control Protocol library
 Url:            http://www.x.org
-Group:          System Environment/Libraries
+Group:          Graphics/X Window System
 
 Source:         %{name}-%{version}.tar.bz2
 
