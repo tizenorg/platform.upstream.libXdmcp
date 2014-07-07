@@ -12,6 +12,10 @@ Source1001: 	libXdmcp.manifest
 BuildRequires:  pkgconfig(xorg-macros)
 BuildRequires:  pkgconfig(xproto)
 
+%if !%{with x}
+ExclusiveArch:
+%endif
+
 %description
 X Display Manager Control Protocol library.
 
