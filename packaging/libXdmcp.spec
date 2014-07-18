@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           libXdmcp
 Version:        1.1.1
 Release:        1
